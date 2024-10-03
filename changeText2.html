@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id = "changeTextButton">Change Text!</button>
+    <p id = "myParagraf">Good Morning!</p>
+
+    <script>
+        let paragraf = document.getElementById("myParagraf");
+        let button = document.getElementById("changeTextButton");
+        button.addEventListener('click', changeText);
+
+        function changeText(e) {
+             paragraf.textContent = "Good Night!"
+        }
+        
+       
+    </script>
+</body>
+</html>
