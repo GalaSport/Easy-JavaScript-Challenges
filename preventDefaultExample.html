@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevent Default Example</title>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" name id="name" placeholder="Enter your name">
+        <button type="submit">Submit</button>
+    </form>
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            if(document.getElementById("name").value == ""){
+                alert('You are not enter your name!')
+
+            }else{
+                alert('Form submission prevented!');
+            }
+            
+        });
+    </script>
+    
+</body>
+</html>
