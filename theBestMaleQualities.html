@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>List of best male qualities</h3>
+    <label>Enter qualities:</label>
+    <input text id="quality">
+    <button id="btn">add</button>
+    <div id="div">
+
+    </div>
+    <script>
+       
+        const btn = document.getElementById('btn');
+        const div = document.getElementById('div')
+        btn.addEventListener('click', add);
+        function add(){
+            const qualities = document.getElementById('quality').value;
+            const li = document.createElement('li')
+            li.textContent = qualities;
+            div.appendChild(li);
+            document.getElementById('quality').value = '';
+        }
+
+    </script>
+</body>
+</html>
