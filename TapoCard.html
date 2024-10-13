@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Generator</title>
+    <style>
+        #image {
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <img id="image" src="your-image.jpg" alt="Click me!" width="200">
+    <div id="result">Кликни върху картата и виж късмета си за днес!</div>
+
+    <script>
+        document.getElementById('image').addEventListener('click', function() {
+    var randomNumber = Math.floor(Math.random() * 10) + 1;
+    let text = "";
+    if(randomNumber = 1){
+        text = `Maгът`;
+    }
+    if(randomNumber = 2){
+        text = `Жрицата`;
+    }
+    if(randomNumber = 3){
+        text = `Императрицата`;
+    }
+    document.getElementById('result').innerText = 'Карта номер: ' + randomNumber + text;
+});
+    </script>
+</body>
+</html>
