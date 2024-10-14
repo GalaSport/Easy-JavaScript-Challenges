@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Number Generator</title>
+    <title>Day Tarot Card</title>
     <style>
         #image {
             cursor: pointer;
@@ -22,17 +22,33 @@
     <script>
         document.getElementById('image').addEventListener('click', function() {
     var randomNumber = Math.floor(Math.random() * 10) + 1;
-    let text = "";
-    if(randomNumber = 1){
-        text = `Maгът`;
+    let card = "";
+    if(randomNumber == 1){
+        card = `Maгът - възможностите ви днес са неограничени.  
+        Днес е ден за предприемане на действия и използване на уменията ви. 
+        Ще имате възможност да покажете на какво сте способни 
+        и да постигнете значителен напредък в проектите си.
+        Ще се чувствате вдъхновени и креативни. 
+        Използвайте този импулс, за да намерите нови решения 
+        на стари проблеми или да започнете нещо ново.`;
     }
-    if(randomNumber = 2){
-        text = `Жрицата`;
+    if(randomNumber == 2){
+        card = `Жрицата`;
     }
-    if(randomNumber = 3){
-        text = `Императрицата`;
+    if(randomNumber == 3){
+        card = `Императрицата`;
     }
-    document.getElementById('result').innerText = 'Карта номер: ' + randomNumber + text;
+    if(randomNumber == 4){
+        card = `Императорът`;
+    }
+    if(randomNumber == 5){
+        card = `Жрецът`;
+    }
+    if(randomNumber == 6){
+        card = `Влюбените`;
+    }
+
+    document.getElementById('result').innerText = `Карта номер: ${randomNumber}. ${card}`
 });
     </script>
 </body>
